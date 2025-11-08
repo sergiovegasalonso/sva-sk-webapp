@@ -8,6 +8,7 @@ describe('/+page.svelte', () => {
 		render(Page);
 
 		const heading = page.getByRole('heading', { level: 1 });
+		console.log(heading);
 		await expect.element(heading).toBeInTheDocument();
 	});
 });

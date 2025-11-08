@@ -12,9 +12,8 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint .",
-		"test:unit": "vitest",
+		"test:unit": "vitest --browser.headless=true",
 		"test": "npm run test:unit -- --run && npm run test:e2e",
-		"test:ci": "ng test --no-watch --no-progress --browsers=ChromeHeadless //todo: fix this",
 		"test:e2e": "playwright test"
 	},
 	"devDependencies": {
