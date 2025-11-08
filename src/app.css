@@ -1,1 +1,14 @@
 @import 'tailwindcss';
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+	--color-*: initial;
+	--color-w: #fff;
+	--color-b: #000;
+	--color-l: oklch(98.7% 0.022 95.277);
+	--color-lh: oklch(96.2% 0.059 95.617);
+	--color-lp: oklch(44.4% 0.177 26.899);
+	--color-d: oklch(21.6% 0.006 56.043);
+	--color-dh: oklch(37.4% 0.01 67.558);
+	--color-dp: oklch(89.7% 0.196 126.665);
+}
