@@ -11,6 +11,8 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+	<meta name="keywords" content="HTML, CSS, JavaScript, SvelteKit, Svelte, TypeScript" />
+	<meta name="author" content="Sergio Vegas Alonso" />
 </svelte:head>
 
 <Header />

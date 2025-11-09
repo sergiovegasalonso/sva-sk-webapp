@@ -6,6 +6,11 @@
 	import XMark from '$lib/components/atoms/icons/XMark.svelte';
 </script>
 
+<svelte:head>
+	<title>sva - home</title>
+	<meta name="description" content="Homepage" />
+</svelte:head>
+
 <h1>{m.hello_world({ name: 'SvelteKit User' })}</h1>
 <div>
 	<button onclick={() => setLocale('en')}>en</button>
