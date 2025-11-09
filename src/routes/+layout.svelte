@@ -1,10 +1,10 @@
 <script lang="ts">
-	import '../app.css';
 	import favicon from '$lib/assets/favicon.png';
+	import Footer from '$lib/components/footer/Footer.svelte';
 	import Header from '$lib/components/header/Header.svelte';
 	import Navbar from '$lib/components/navbar/Navbar.svelte';
 	import Page from '$lib/components/page/Page.svelte';
-	import Footer from '$lib/components/footer/Footer.svelte';
+	import '$root/app.css';
 
 	let { children } = $props();
 </script>
