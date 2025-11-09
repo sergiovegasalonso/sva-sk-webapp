@@ -4,6 +4,7 @@
 	import Sun from '$lib/components/atoms/icons/Sun.svelte';
 	import Moon from '$lib/components/atoms/icons/Moon.svelte';
 	import XMark from '$lib/components/atoms/icons/XMark.svelte';
+	import Button from '$lib/components/atoms/buttons/Button.svelte';
 </script>
 
 <svelte:head>
@@ -25,3 +26,4 @@
 <Sun />
 <Moon />
 <XMark />
+<Button ariaLabel="Example button">Jjejejej</Button>
