@@ -12,3 +12,18 @@
 	--color-dh: oklch(37.4% 0.01 67.558);
 	--color-dp: oklch(89.7% 0.196 126.665);
 }
+
+@font-face {
+	font-style: normal;
+	font-weight: 400;
+	src: url('/static/fonts/JetBrainsMono-Regular.ttf') format('truetype');
+	font-family: 'JetBrains Mono', monospace;
+	font-display: swap;
+	font-optical-sizing: auto;
+}
+
+* {
+	line-height: 1.5;
+	font-family: 'JetBrains Mono', monospace;
+	font-variation-settings: 'wdth' 100;
+}

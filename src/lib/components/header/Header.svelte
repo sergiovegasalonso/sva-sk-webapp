@@ -1,6 +1,7 @@
-<header class="">
-	<h1>Welcome to SvelteKit</h1>
-	<p>
-		Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation
-	</p>
+<script lang="ts">
+	import Logo from '$lib/components/atoms/logo/Logo.svelte';
+</script>
+
+<header class="p-4 lg:p-8">
+	<Logo />
 </header>
