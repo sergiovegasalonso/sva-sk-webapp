@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { setLocale } from '$lib/paraglide/runtime';
-	import { m } from '$lib/paraglide/messages.js';
-	import Sun from '$lib/components/atoms/icons/Sun.svelte';
-	import Moon from '$lib/components/atoms/icons/Moon.svelte';
-	import XMark from '$lib/components/atoms/icons/XMark.svelte';
 	import Button from '$lib/components/atoms/buttons/Button.svelte';
+	import Moon from '$lib/components/atoms/icons/Moon.svelte';
+	import Sun from '$lib/components/atoms/icons/Sun.svelte';
+	import XMark from '$lib/components/atoms/icons/XMark.svelte';
+	import { m } from '$lib/paraglide/messages.js';
+	import { setLocale } from '$lib/paraglide/runtime';
 </script>
 
 <svelte:head>
