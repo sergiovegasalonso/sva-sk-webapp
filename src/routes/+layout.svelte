@@ -1,10 +1,10 @@
 <script lang="ts">
 	import favicon from '$lib/assets/favicon.png';
-	import Footer from '$lib/components/footer/Footer.svelte';
-	import Header from '$lib/components/header/Header.svelte';
-	import Navbar from '$lib/components/navbar/Navbar.svelte';
-	import Page from '$lib/components/page/Page.svelte';
+	import Header from '$lib/components/organisms/header/Header.svelte';
+	import Navbar from '$lib/components/organisms/navbar/Navbar.svelte';
 	import '$root/app.css';
+	import Page from '$root/lib/components/atoms/page/Page.svelte';
+	import Footer from '$root/lib/components/organisms/footer/Footer.svelte';
 
 	let { children } = $props();
 </script>
