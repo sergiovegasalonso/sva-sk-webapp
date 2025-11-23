@@ -1,9 +1,10 @@
 <script lang="ts">
-	let { ariaLabel, children } = $props();
+	let { ariaLabel, children, ...rest } = $props();
 </script>
 
 <button
 	class="flex cursor-pointer items-center border-2 px-4 py-2 hover:bg-lh dark:hover:bg-dh"
-	aria-label={ariaLabel}>
+	aria-label={ariaLabel}
+	{...rest}>
 	{@render children()}
 </button>
