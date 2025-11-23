@@ -1,6 +1,6 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"theme": "Tema",
 	"hello_world": "Hello, {name} from es!",
-	"spanish": "Español",
-	"english": "Inglés"
+	"toggle_theme": "Cambiar tema"
 }

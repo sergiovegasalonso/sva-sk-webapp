@@ -1,9 +1,10 @@
 <script lang="ts">
 	import Button from '$lib/components/atoms/buttons/Button.svelte';
 	import Moon from '$lib/components/atoms/icons/Moon.svelte';
-	import Sun from '$lib/components/atoms/icons/Sun.svelte';
 	import Space from '$lib/components/atoms/Space.svelte';
+	import Sun from '$lib/components/atoms/icons/Sun.svelte';
 	import { Theme } from '$lib/domain/enums/theme.enum';
+	import { m } from '$lib/paraglide/messages.js';
 
 	function toggleTheme() {
 		const documentElement = document.documentElement;
@@ -14,7 +15,7 @@
 	}
 </script>
 
-<Button ariaLabel="Toggle theme" onclick={toggleTheme}>
+<Button ariaLabel={m.toggle_theme()} onclick={toggleTheme}>
 	<div class="hidden dark:block">
 		<Sun />
 	</div>
@@ -23,6 +24,6 @@
 	</div>
 	<div class="hidden lg:flex">
 		<Space />
-		<span>Theme</span>
+		<span>{m.theme()} </span>
 	</div>
 </Button>
