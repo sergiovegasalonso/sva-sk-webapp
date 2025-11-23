@@ -2,5 +2,6 @@
 	"$schema": "https://inlang.com/schema/inlang-message-format",
 	"theme": "Tema",
 	"hello_world": "Hello, {name} from es!",
-	"toggle_theme": "Cambiar tema"
+	"toggle_theme": "Cambiar tema",
+	"toggle_locale": "Cambiar idioma"
 }

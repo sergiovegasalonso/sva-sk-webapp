@@ -4,9 +4,14 @@
 	import Space from '$lib/components/atoms/Space.svelte';
 	import { Locale } from '$lib/domain/enums/locale.enum';
 	import { getLocale, setLocale } from '$lib/paraglide/runtime';
+	import { m } from '$lib/paraglide/messages.js';
 
-	function getOppositeLocaleText() {
+	function getOppositeLocaleCompleteText() {
 		return getLocale() === Locale.ES ? 'English' : 'Español';
+	}
+
+	function getOppositeLocaleReducedText() {
+		return getLocale() === Locale.ES ? 'En' : 'Es';
 	}
 
 	function toggleLocale() {
@@ -14,10 +19,14 @@
 	}
 </script>
 
-<Button ariaLabel="Change language" onclick={toggleLocale}>
+<Button ariaLabel={m.toggle_locale()} onclick={toggleLocale}>
 	<Language />
 	<div class="hidden lg:flex">
 		<Space />
-		<span>{getOppositeLocaleText()}</span>
+		<span>{getOppositeLocaleCompleteText()}</span>
+	</div>
+	<div class="flex lg:hidden">
+		<Space />
+		<span>{getOppositeLocaleReducedText()}</span>
 	</div>
 </Button>

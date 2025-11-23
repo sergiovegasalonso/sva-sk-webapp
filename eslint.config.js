@@ -1,10 +1,11 @@
 import { fileURLToPath } from 'node:url';
+
 import { includeIgnoreFile } from '@eslint/compat';
 import js from '@eslint/js';
+import { defineConfig } from 'eslint/config';
 import prettier from 'eslint-config-prettier';
 import importPlugin from 'eslint-plugin-import';
 import svelte from 'eslint-plugin-svelte';
-import { defineConfig } from 'eslint/config';
 import globals from 'globals';
 import ts from 'typescript-eslint';
 
@@ -30,7 +31,15 @@ export default defineConfig(
 			// typescript-eslint strongly recommend that you do not use the no-undef lint rule on TypeScript projects.
 			// see: https://typescript-eslint.io/troubleshooting/faqs/eslint/#i-get-errors-from-the-no-undef-rule-about-global-variables-not-being-defined-even-though-there-are-no-typescript-errors
 			'no-undef': 'off',
-			'import/order': 'off'
+			'import/order': [
+				'warn',
+				{
+					alphabetize: {
+						order: 'asc',
+						caseInsensitive: true
+					}
+				}
+			]
 		}
 	},
 	{
