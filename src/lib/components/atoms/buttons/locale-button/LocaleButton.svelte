@@ -17,5 +17,5 @@
 <Button ariaLabel="Change language" onclick={toggleLocale}>
 	<Language />
 	<Space />
-	<p>{getOppositeLocaleText()}</p>
+	{getOppositeLocaleText()}
 </Button>
