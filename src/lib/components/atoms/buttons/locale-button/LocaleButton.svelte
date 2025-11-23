@@ -16,6 +16,8 @@
 
 <Button ariaLabel="Change language" onclick={toggleLocale}>
 	<Language />
-	<Space />
-	{getOppositeLocaleText()}
+	<div class="hidden lg:flex">
+		<Space />
+		<span>{getOppositeLocaleText()}</span>
+	</div>
 </Button>
