@@ -3,8 +3,8 @@
 	import Language from '$lib/components/atoms/icons/Language.svelte';
 	import Space from '$lib/components/atoms/Space.svelte';
 	import { Locale } from '$lib/domain/enums/locale.enum';
-	import { getLocale, setLocale } from '$lib/paraglide/runtime';
 	import { m } from '$lib/paraglide/messages.js';
+	import { getLocale, setLocale } from '$lib/paraglide/runtime';
 
 	function getOppositeLocaleCompleteText() {
 		return getLocale() === Locale.ES ? 'English' : 'Español';
