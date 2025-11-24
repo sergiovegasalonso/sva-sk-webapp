@@ -17,7 +17,7 @@
 	}
 </script>
 
-<Button ariaLabel={m.toggle_theme()} onclick={toggleTheme} class={className}>
+<Button ariaLabel={m.toggle_theme()} class={className} onclick={toggleTheme}>
 	<Sun class="hidden dark:block" />
 	<Moon class="block dark:hidden" />
 	<div class="hidden lg:flex">

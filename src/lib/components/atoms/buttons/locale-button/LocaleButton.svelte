@@ -21,7 +21,7 @@
 	}
 </script>
 
-<Button ariaLabel={m.toggle_locale()} onclick={toggleLocale} class={className}>
+<Button ariaLabel={m.toggle_locale()} class={className} onclick={toggleLocale}>
 	<Language />
 	<div class="hidden lg:flex">
 		<Space />
