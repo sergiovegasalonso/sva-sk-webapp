@@ -1,9 +1,10 @@
 <script lang="ts">
 	import favicon from '$lib/assets/favicon.png';
-	import Page from '$lib/components/atoms/page/Page.svelte';
+	import DrawerButton from '$lib/components/atoms/buttons/drawer-button/DrawerButton.svelte';
 	import Footer from '$lib/components/organisms/footer/Footer.svelte';
 	import Header from '$lib/components/organisms/header/Header.svelte';
 	import Navbar from '$lib/components/organisms/navbar/Navbar.svelte';
+	import Page from '$lib/components/atoms/page/Page.svelte';
 	import '$root/app.css';
 
 	let { children } = $props();
@@ -20,4 +21,5 @@
 <Page>
 	{@render children()}
 </Page>
+<DrawerButton class="fixed right-4 bottom-4 lg:right-8 lg:bottom-8" />
 <Footer />

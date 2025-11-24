@@ -6,20 +6,22 @@
 	import { m } from '$lib/paraglide/messages.js';
 	import { getLocale, setLocale } from '$lib/paraglide/runtime';
 
-	function getOppositeLocaleCompleteText() {
+	let { class: className = '' } = $props();
+
+	function getOppositeLocaleCompleteText(): string {
 		return getLocale() === Locale.ES ? 'English' : 'Español';
 	}
 
-	function getOppositeLocaleReducedText() {
+	function getOppositeLocaleReducedText(): string {
 		return getLocale() === Locale.ES ? 'En' : 'Es';
 	}
 
-	function toggleLocale() {
+	function toggleLocale(): void {
 		setLocale(getLocale() === Locale.ES ? Locale.EN : Locale.ES);
 	}
 </script>
 
-<Button ariaLabel={m.toggle_locale()} onclick={toggleLocale}>
+<Button ariaLabel={m.toggle_locale()} onclick={toggleLocale} class={className}>
 	<Language />
 	<div class="hidden lg:flex">
 		<Space />

@@ -6,7 +6,9 @@
 	import { Theme } from '$lib/domain/enums/theme.enum';
 	import { m } from '$lib/paraglide/messages.js';
 
-	function toggleTheme() {
+	let { class: className = '' } = $props();
+
+	function toggleTheme(): void {
 		const documentElement = document.documentElement;
 		documentElement.classList.toggle(Theme.Dark);
 
@@ -15,13 +17,9 @@
 	}
 </script>
 
-<Button ariaLabel={m.toggle_theme()} onclick={toggleTheme}>
-	<div class="hidden dark:block">
-		<Sun />
-	</div>
-	<div class="block dark:hidden">
-		<Moon />
-	</div>
+<Button ariaLabel={m.toggle_theme()} onclick={toggleTheme} class={className}>
+	<Sun class="hidden dark:block" />
+	<Moon class="block dark:hidden" />
 	<div class="hidden lg:flex">
 		<Space />
 		<span>{m.theme()} </span>

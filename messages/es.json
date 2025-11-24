@@ -3,5 +3,7 @@
 	"theme": "Tema",
 	"hello_world": "Hello, {name} from es!",
 	"toggle_theme": "Cambiar tema",
-	"toggle_locale": "Cambiar idioma"
+	"toggle_locale": "Cambiar idioma",
+	"toggle_menu": "Abrir/cerrar menú",
+	"menu": "Menú"
 }
