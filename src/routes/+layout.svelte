@@ -4,8 +4,8 @@
 	import Page from '$lib/components/atoms/page/Page.svelte';
 	import Footer from '$lib/components/organisms/footer/Footer.svelte';
 	import Header from '$lib/components/organisms/header/Header.svelte';
-	import Navbar from '$lib/components/organisms/navbar/Navbar.svelte';
 	import '$root/app.css';
+	import Drawer from '$root/lib/components/organisms/drawer/Drawer.svelte';
 
 	let { children } = $props();
 </script>
@@ -17,9 +17,9 @@
 </svelte:head>
 
 <Header />
-<Navbar />
+<Drawer />
 <Page>
 	{@render children()}
 </Page>
-<DrawerButton class="fixed right-4 bottom-4 lg:right-8 lg:bottom-8" />
+<DrawerButton class="fixed right-4 bottom-4 lg:right-8 lg:bottom-8 z-90" />
 <Footer />
