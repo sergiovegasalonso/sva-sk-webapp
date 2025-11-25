@@ -1,7 +1,7 @@
 <script lang="ts">
+	import Space from '$lib/components/atoms/Space.svelte';
 	import Button from '$lib/components/atoms/buttons/Button.svelte';
 	import Language from '$lib/components/atoms/icons/Language.svelte';
-	import Space from '$lib/components/atoms/Space.svelte';
 	import { Locale } from '$lib/domain/enums/locale.enum';
 	import { m } from '$lib/paraglide/messages.js';
 	import { getLocale, setLocale } from '$lib/paraglide/runtime';
