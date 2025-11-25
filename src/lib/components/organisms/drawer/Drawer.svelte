@@ -3,7 +3,7 @@
 </script>
 
 <nav
-	class="fixed w-96 top-0 bottom-0 right-0 bg z-80 bg-l dark:bg-d border-2 transform-gpu transition-transform duration-500 ease-in-out {drawerState.open
+	class="bg fixed top-0 right-0 bottom-0 z-80 w-96 transform-gpu border-2 bg-l transition-transform duration-500 ease-in-out dark:bg-d {drawerState.open
 		? ''
 		: 'translate-x-full'}">
 	<ul></ul>
