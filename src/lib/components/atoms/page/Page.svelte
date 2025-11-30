@@ -2,6 +2,6 @@
 	let { children } = $props();
 </script>
 
-<main class="p-4 lg:p-8">
+<main class="flex-1 p-4 lg:p-8">
 	{@render children()}
 </main>

@@ -1,10 +1,10 @@
 <script lang="ts">
 	import Space from '$lib/components/atoms/Space.svelte';
-	import Button from '$lib/components/atoms/buttons/Button.svelte';
 	import Bars2 from '$lib/components/atoms/icons/Bars2.svelte';
 	import XMark from '$lib/components/atoms/icons/XMark.svelte';
 	import { m } from '$lib/paraglide/messages.js';
 	import { drawerState } from '$lib/states/drawer-state.svelte.js';
+	import Button from '$root/lib/components/atoms/buttons/Button.svelte';
 
 	let { class: className = '' } = $props();
 
