@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Logo from '$lib/components/atoms/Logo.svelte';
+	import Logo from '$lib/components/atoms/logo/Logo.svelte';
 	import AppOptions from '$lib/components/molecules/AppOptions.svelte';
 </script>
 
