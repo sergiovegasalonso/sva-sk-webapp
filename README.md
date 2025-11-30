@@ -1,9 +1,9 @@
 # pending
 
+0. dejar todos los tests ok
 1. Crear home chula
-2. Añadir test unitarios por compoenente, por ruta y test e2e
-3. Plugin accesibilidad????
-4. Añadir todos los strings a paraglide
+2. Plugin accesibilidad????
+3. Añadir todos los strings a paraglide
 
 ```js
 // routes/page.svelte.spec.ts
