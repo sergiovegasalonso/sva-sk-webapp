@@ -1,10 +1,10 @@
 <script lang="ts">
-	import Space from '$lib/components/atoms/Space.svelte';
+	import Button from '$lib/components/atoms/buttons/Button.svelte';
 	import Moon from '$lib/components/atoms/icons/Moon.svelte';
 	import Sun from '$lib/components/atoms/icons/Sun.svelte';
+	import Space from '$lib/components/atoms/space/Space.svelte';
 	import { Theme } from '$lib/domain/enums/theme.enum';
 	import { m } from '$lib/paraglide/messages.js';
-	import Button from '$root/lib/components/atoms/buttons/Button.svelte';
 
 	let { class: className = '' } = $props();
 
