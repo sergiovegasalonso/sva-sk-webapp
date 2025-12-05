@@ -13,6 +13,8 @@
 10. websockets experiment
 11. d3.js experiment
 12. zod???
+13. estandarizar forma de funcionar: página que obtiene datos y luego los pasa a los organims, atoms, molecules.
+14. Estudiar atomic desing
 
 ```js
 // routes/page.svelte.spec.ts
