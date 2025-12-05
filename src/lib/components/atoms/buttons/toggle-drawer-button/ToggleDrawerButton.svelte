@@ -3,7 +3,7 @@
 	import Bars2 from '$lib/components/atoms/icons/Bars2.svelte';
 	import XMark from '$lib/components/atoms/icons/XMark.svelte';
 	import Space from '$lib/components/atoms/space/Space.svelte';
-	import { m } from '$lib/paraglide/messages.js';
+	import { m } from '$lib/i18n/messages.js';
 	import { drawerState } from '$lib/states/drawer-state.svelte.js';
 
 	let { class: className = '' } = $props();

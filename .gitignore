@@ -24,7 +24,7 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
 # Paraglide
-src/lib/paraglide
+src/lib/i18n
 
 # Tests
 __screenshots__

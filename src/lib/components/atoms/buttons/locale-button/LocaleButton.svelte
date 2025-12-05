@@ -3,8 +3,8 @@
 	import Language from '$lib/components/atoms/icons/Language.svelte';
 	import Space from '$lib/components/atoms/space/Space.svelte';
 	import { Locale } from '$lib/domain/enums/locale.enum';
-	import { m } from '$lib/paraglide/messages.js';
-	import { getLocale, setLocale } from '$lib/paraglide/runtime';
+	import { m } from '$lib/i18n/messages.js';
+	import { getLocale, setLocale } from '$lib/i18n/runtime';
 
 	let { class: className = '' } = $props();
 

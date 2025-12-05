@@ -4,7 +4,7 @@
 	import Sun from '$lib/components/atoms/icons/Sun.svelte';
 	import Space from '$lib/components/atoms/space/Space.svelte';
 	import { Theme } from '$lib/domain/enums/theme.enum';
-	import { m } from '$lib/paraglide/messages.js';
+	import { m } from '$lib/i18n/messages.js';
 
 	let { class: className = '' } = $props();
 
