@@ -4,6 +4,15 @@
 1. Crear home chula
 2. Plugin accesibilidad????
 3. Añadir todos los strings a paraglide
+4. Login :)
+5. feature flags system
+6. environment configuration in front
+7. dsa lab
+8. nalanda lab
+9. tanstack query
+10. websockets experiment
+11. d3.js experiment
+12. zod???
 
 ```js
 // routes/page.svelte.spec.ts
