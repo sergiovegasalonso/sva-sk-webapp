@@ -10,14 +10,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        name: Checkout repository
+
       - uses: pnpm/action-setup@v4
+        name: Setup pnpm
+        with:
+          version: 10
+          run_install: false
+
       - uses: actions/setup-node@v4
+        name: Setup node.js
         with:
           node-version: lts/*
           cache: 'pnpm'
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+
       - name: Install Playwright Browsers
         run: pnpm exec playwright install --with-deps
+
       - name: Run Vitest tests
         run: pnpm exec vitest --browser.headless=true
