@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Button from '$lib/components/atoms/buttons/Button.svelte';
-	import XMark from '$lib/components/atoms/icons/Close.svelte';
-	import Bars2 from '$lib/components/atoms/icons/Menu.svelte';
+	import CloseIcon from '$lib/components/atoms/icons/close/Close.svelte';
+	import MenuIcon from '$lib/components/atoms/icons/menu/Menu.svelte';
 	import Space from '$lib/components/atoms/space/Space.svelte';
 	import { m } from '$lib/i18n/messages.js';
 	import { drawerState } from '$lib/states/drawer-state.svelte.js';
@@ -15,9 +15,9 @@
 
 <Button ariaLabel={m.toggle_menu()} class={className} onclick={toggleMenu}>
 	{#if drawerState.open}
-		<XMark />
+		<CloseIcon />
 	{:else}
-		<Bars2 />
+		<MenuIcon />
 	{/if}
 	<div class="hidden lg:flex">
 		<Space />

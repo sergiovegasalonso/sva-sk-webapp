@@ -1,12 +1,12 @@
 <script lang="ts">
 	import Button from '$lib/components/atoms/buttons/Button.svelte';
-	import Language from '$lib/components/atoms/icons/Language.svelte';
-	import LanguageSpanish from '$lib/components/atoms/icons/LanguageSpanish.svelte';
+	import LanguageEnglishIcon from '$lib/components/atoms/icons/language-english/LanguageEnglish.svelte';
+	import LanguageSpanishIcon from '$lib/components/atoms/icons/language-spanish/LanguageSpanish.svelte';
+	import LanguageIcon from '$lib/components/atoms/icons/language/Language.svelte';
 	import Space from '$lib/components/atoms/space/Space.svelte';
 	import { Locale } from '$lib/domain/enums/locale.enum';
 	import { m } from '$lib/i18n/messages.js';
 	import { getLocale, setLocale } from '$lib/i18n/runtime';
-	import LanguageEnglish from '$root/lib/components/atoms/icons/LanguageEnglish.svelte';
 
 	let { class: className = '' } = $props();
 
@@ -20,7 +20,7 @@
 </script>
 
 <Button ariaLabel={m.toggle_locale()} class={className} onclick={toggleLocale}>
-	<Language />
+	<LanguageIcon />
 	<div class="hidden lg:flex">
 		<Space />
 		<span>{getOppositeLocaleCompleteText()}</span>
@@ -28,9 +28,9 @@
 	<div class="flex lg:hidden">
 		<Space />
 		{#if getLocale() === Locale.ES}
-			<LanguageEnglish />
+			<LanguageEnglishIcon />
 		{:else}
-			<LanguageSpanish />
+			<LanguageSpanishIcon />
 		{/if}
 	</div>
 </Button>
