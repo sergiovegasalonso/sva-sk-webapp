@@ -1,19 +1,17 @@
 <script lang="ts">
 	import Button from '$lib/components/atoms/buttons/Button.svelte';
 	import Language from '$lib/components/atoms/icons/Language.svelte';
+	import LanguageSpanish from '$lib/components/atoms/icons/LanguageSpanish.svelte';
 	import Space from '$lib/components/atoms/space/Space.svelte';
 	import { Locale } from '$lib/domain/enums/locale.enum';
 	import { m } from '$lib/i18n/messages.js';
 	import { getLocale, setLocale } from '$lib/i18n/runtime';
+	import LanguageEnglish from '$root/lib/components/atoms/icons/LanguageEnglish.svelte';
 
 	let { class: className = '' } = $props();
 
 	function getOppositeLocaleCompleteText(): string {
 		return getLocale() === Locale.ES ? 'English' : 'Español';
-	}
-
-	function getOppositeLocaleReducedText(): string {
-		return getLocale() === Locale.ES ? 'En' : 'Es';
 	}
 
 	function toggleLocale(): void {
@@ -29,6 +27,10 @@
 	</div>
 	<div class="flex lg:hidden">
 		<Space />
-		<span>{getOppositeLocaleReducedText()}</span>
+		{#if getLocale() === Locale.ES}
+			<LanguageEnglish />
+		{:else}
+			<LanguageSpanish />
+		{/if}
 	</div>
 </Button>
