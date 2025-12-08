@@ -1,12 +1,12 @@
 <script lang="ts">
-	import Button from '$lib/components/atoms/buttons/Button.svelte';
-	import LanguageEnglishIcon from '$lib/components/atoms/icons/language-english/LanguageEnglish.svelte';
-	import LanguageSpanishIcon from '$lib/components/atoms/icons/language-spanish/LanguageSpanish.svelte';
-	import LanguageIcon from '$lib/components/atoms/icons/language/Language.svelte';
-	import Space from '$lib/components/atoms/space/Space.svelte';
-	import { Locale } from '$lib/domain/enums/locale.enum';
 	import { m } from '$lib/i18n/messages.js';
 	import { getLocale, setLocale } from '$lib/i18n/runtime';
+	import Button from '$shared/components/atoms/buttons/Button.svelte';
+	import LanguageEnglishIcon from '$shared/components/atoms/icons/language-english/LanguageEnglish.svelte';
+	import LanguageSpanishIcon from '$shared/components/atoms/icons/language-spanish/LanguageSpanish.svelte';
+	import LanguageIcon from '$shared/components/atoms/icons/language/Language.svelte';
+	import Space from '$shared/components/atoms/space/Space.svelte';
+	import { Locale } from '$shared/types/enums/locale.enum';
 
 	let { class: className = '' } = $props();
 

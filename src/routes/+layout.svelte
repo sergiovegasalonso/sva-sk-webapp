@@ -1,10 +1,10 @@
 <script lang="ts">
 	import favicon from '$lib/assets/favicon.png';
-	import ToggleDrawerButton from '$lib/components/atoms/buttons/toggle-drawer-button/ToggleDrawerButton.svelte';
-	import Page from '$lib/components/atoms/page/Page.svelte';
-	import Drawer from '$lib/components/organisms/drawer/Drawer.svelte';
-	import Header from '$lib/components/organisms/header/Header.svelte';
 	import '$root/app.css';
+	import ToggleDrawerButton from '$shared/components/atoms/buttons/toggle-drawer-button/ToggleDrawerButton.svelte';
+	import Page from '$shared/components/atoms/page/Page.svelte';
+	import Drawer from '$shared/components/organisms/drawer/Drawer.svelte';
+	import Header from '$shared/components/organisms/header/Header.svelte';
 
 	let { children } = $props();
 </script>
