@@ -1,6 +1,5 @@
 # pending
 
-0. dejar todos los tests ok, cambiar todos los renderPage :S
 1. /home/zegio/projects/high-performance-web/sva-sk-webapp/src/shared/components/molecules/app-options/AppOptions.svelte.spec.ts revisar y ordenar, también **mocks**
 2. Revisar Drawer, Header, LocaleButton, ThemeButton and ToggleDrawerButton
 3. limpiar lib
