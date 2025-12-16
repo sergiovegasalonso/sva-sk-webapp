@@ -3,6 +3,7 @@
 0. arquitectura escalable GeorgeBYTES +ATOMIC DESING
 1. /home/zegio/projects/high-performance-web/sva-sk-webapp/src/shared/components/molecules/app-options/AppOptions.svelte.spec.ts revisar y ordenar, también **mocks**
 2. Revisar Drawer, Header, LocaleButton, ThemeButton and ToggleDrawerButton
+   Cambiar enumeraciones a objetos de javascript constantes
 3. limpiar lib
 4. Crear home chula
 5. Plugin accesibilidad????
