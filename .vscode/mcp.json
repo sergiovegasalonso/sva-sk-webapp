@@ -4,6 +4,26 @@
 			"type": "stdio",
 			"command": "npx",
 			"args": ["-y", "@sveltejs/mcp"]
+		},
+		"ESLint": {
+			"type": "stdio",
+			"command": "npx",
+			"args": ["@eslint/mcp@latest"]
+		},
+		"vitest": {
+			"type": "stdio",
+			"command": "npx",
+			"args": ["-y", "@djankies/vitest-mcp"]
+		},
+		"playwright": {
+			"command": "npx",
+			"args": ["@playwright/mcp@latest"],
+			"type": "stdio"
+		},
+		"playwright-test": {
+			"type": "stdio",
+			"command": "npx",
+			"args": ["playwright", "run-test-mcp-server"]
 		}
 	},
 	"inputs": []
