@@ -5,11 +5,6 @@
 			"command": "npx",
 			"args": ["-y", "@sveltejs/mcp"]
 		},
-		"ESLint": {
-			"type": "stdio",
-			"command": "npx",
-			"args": ["@eslint/mcp@latest"]
-		},
 		"vitest": {
 			"type": "stdio",
 			"command": "npx",
