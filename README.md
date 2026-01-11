@@ -1,5 +1,5 @@
 # pending
-
+CORREGIR ERROR CON LOS BORDES
 0. arquitectura escalable GeorgeBYTES +ATOMIC DESING
 1. create agents and copilot intructions...
 2. /home/zegio/projects/high-performance-web/sva-sk-webapp/src/shared/components/molecules/app-options/AppOptions.svelte.spec.ts revisar y ordenar, también **mocks**
