@@ -29,3 +29,9 @@ src/lib/i18n
 # Tests
 __screenshots__
 test_results
+
+# Playwright
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/

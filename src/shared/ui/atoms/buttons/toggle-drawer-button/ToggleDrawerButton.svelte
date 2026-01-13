@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { m } from '$lib/i18n/messages.js';
 	import { drawerState } from '$lib/states/drawer-state.svelte.js';
-	import Button from '$shared/components/atoms/buttons/Button.svelte';
-	import CloseIcon from '$shared/components/atoms/icons/close/Close.svelte';
-	import MenuIcon from '$shared/components/atoms/icons/menu/Menu.svelte';
-	import Space from '$shared/components/atoms/space/Space.svelte';
+	import Button from '$shared/ui/atoms/buttons/Button.svelte';
+	import CloseIcon from '$shared/ui/atoms/icons/close/Close.svelte';
+	import MenuIcon from '$shared/ui/atoms/icons/menu/Menu.svelte';
+	import Space from '$shared/ui/atoms/space/Space.svelte';
 
 	let { class: className = '' } = $props();
 

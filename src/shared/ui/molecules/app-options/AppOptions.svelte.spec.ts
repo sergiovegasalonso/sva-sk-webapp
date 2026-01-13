@@ -3,13 +3,13 @@ import { render } from 'vitest-browser-svelte';
 import AppOptions from './AppOptions.svelte';
 
 // Mock the child components
-vi.mock('$shared/components/atoms/buttons/locale-button/LocaleButton.svelte', async () => {
+vi.mock('$shared/ui/atoms/buttons/locale-button/LocaleButton.svelte', async () => {
 	return {
 		default: (await import('./__mocks__/MockLocaleButton.svelte')).default
 	};
 });
 
-vi.mock('$shared/components/atoms/buttons/theme-button/ThemeButton.svelte', async () => {
+vi.mock('$shared/ui/atoms/buttons/theme-button/ThemeButton.svelte', async () => {
 	return {
 		default: (await import('./__mocks__/MockThemeButton.svelte')).default
 	};
