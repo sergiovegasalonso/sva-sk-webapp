@@ -1,0 +1,23 @@
+name: 'Setup PNPM Environment'
+description: 'Sets up a PNPM environment with Node.js, installs dependencies, and Playwright browsers.'
+runs:
+  using: 'composite'
+  steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v4
+      with:
+        version: 10
+        run_install: false
+    - name: Setup node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: lts/*
+        cache: 'pnpm'
+    - name: Install dependencies
+      run: pnpm install --frozen-lockfile
+      shell: bash
+    - name: Install Playwright Browsers
+      run: pnpm exec playwright install --with-deps
+      shell: bash
