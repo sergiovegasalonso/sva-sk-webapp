@@ -1,7 +1,7 @@
 <script lang="ts">
-	import favicon from '$shared/ui/atoms/icons/favicon/favicon.png';
 	import '$root/app.css';
 	import ToggleDrawerButton from '$shared/ui/atoms/buttons/toggle-drawer-button/ToggleDrawerButton.svelte';
+	import favicon from '$shared/ui/atoms/icons/favicon/favicon.png';
 	import Page from '$shared/ui/atoms/page/Page.svelte';
 	import Drawer from '$shared/ui/organisms/drawer/Drawer.svelte';
 	import Header from '$shared/ui/organisms/header/Header.svelte';

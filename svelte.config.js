@@ -12,7 +12,7 @@ const config = {
 			$core: 'src/core',
 			$features: 'src/features',
 			$root: 'src',
-			$shared: 'src/shared',
+			$shared: 'src/shared'
 		}
 	}
 };
