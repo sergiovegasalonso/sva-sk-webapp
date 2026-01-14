@@ -1,4 +1,4 @@
-name: e2e tests
+name: Test e2e
 on:
   push:
     branches: main
@@ -13,9 +13,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Setup pnpm environment
-        uses: ./.github/actions/setup
-      - name: Build project
-        run: pnpm exec vite build
+        uses: ./.github/actions/setup-pnpm-environment
+      - name: Install Playwright browsers
+        uses: ./.github/actions/install-playwright-browsers
+      - name: Build project with Vite
+        uses: ./.github/actions/build-project
       - name: Run Playwright tests
         run: pnpm exec playwright test
       - uses: actions/upload-artifact@v4

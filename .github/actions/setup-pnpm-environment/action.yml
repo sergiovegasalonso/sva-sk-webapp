@@ -1,5 +1,5 @@
 name: 'Setup pnpm environment'
-description: 'Sets up a pnpm environment with Node.js, installs dependencies, and Playwright browsers.'
+description: 'Sets up a pnpm environment with Node.js and dependencies installation.'
 runs:
   using: 'composite'
   steps:
@@ -15,7 +15,4 @@ runs:
         cache: 'pnpm'
     - name: Install dependencies
       run: pnpm install --frozen-lockfile
-      shell: bash
-    - name: Install Playwright Browsers
-      run: pnpm exec playwright install --with-deps
       shell: bash

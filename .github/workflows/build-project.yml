@@ -1,4 +1,4 @@
-name: unit tests
+name: Build project
 on:
   push:
     branches: main
@@ -11,7 +11,5 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Setup pnpm environment
-        uses: ./.github/actions/setup
-      - name: Run Vitest tests
-        run: pnpm exec vitest --browser.headless=true
+      - name: Build project with Vite
+        uses: ./.github/actions/build-project
