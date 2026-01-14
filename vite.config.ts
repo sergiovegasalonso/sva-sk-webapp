@@ -8,7 +8,7 @@ export default defineConfig({
 		tailwindcss(),
 		sveltekit(),
 		paraglideVitePlugin({
-			project: './src/i18n/configuration',
+			project: './src/i18n/.inlang',
 			outdir: './src/lib/i18n'
 		})
 	],
