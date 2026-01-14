@@ -1,7 +1,6 @@
 name: Deploy
 on:
   workflow_run:
-    workflows: ['Build project', 'Check code', 'Lint code', 'Test e2e', 'Test unit']
     types:
       - completed
 jobs:
