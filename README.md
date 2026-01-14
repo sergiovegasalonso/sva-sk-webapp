@@ -1,6 +1,7 @@
 # pending
 
-CORREGIR ERROR CON LOS BORDES 0. arquitectura escalable GeorgeBYTES +ATOMIC DESING 0. remove agents, improve github actions, remove lib 2. /home/zegio/projects/high-performance-web/sva-sk-webapp/src/shared/components/molecules/app-options/AppOptions.svelte.spec.ts revisar y ordenar, también **mocks** 3. Revisar Drawer, Header, LocaleButton, ThemeButton and ToggleDrawerButton 4. limpiar lib 5. Crear home chula 6. Plugin accesibilidad???? 7. Añadir todos los strings a paraglide 8. Login :) 9. feature flags system 10. environment configuration in front 11. dsa lab 12. nalanda lab with rxjs and tanstack query 13. websockets experiment 14. d3.js experiment 15. zod??? 16. estandarizar forma de funcionar: página que obtiene datos y luego los pasa a los organims, atoms, molecules. 17. Estudiar atomic desing
+1. arquitectura escalable GeorgeBYTES +ATOMIC DESING
+2. remove agents, improve github actions, remove lib 2. /home/zegio/projects/high-performance-web/sva-sk-webapp/src/shared/components/molecules/app-options/AppOptions.svelte.spec.ts revisar y ordenar, también **mocks** 3. Revisar Drawer, Header, LocaleButton, ThemeButton and ToggleDrawerButton 4. limpiar lib 5. Crear home chula 6. Plugin accesibilidad???? 7. Añadir todos los strings a paraglide 8. Login :) 9. feature flags system 10. environment configuration in front 11. dsa lab 12. nalanda lab with rxjs and tanstack query 13. websockets experiment 14. d3.js experiment 15. zod??? 16. estandarizar forma de funcionar: página que obtiene datos y luego los pasa a los organims, atoms, molecules. 17. Estudiar atomic desing
 
 ```js
 // routes/page.svelte.spec.ts

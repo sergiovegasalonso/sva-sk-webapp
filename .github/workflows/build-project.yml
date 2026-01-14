@@ -11,5 +11,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: Setup pnpm environment
+        uses: ./.github/actions/setup-pnpm-environment
       - name: Build project with Vite
         uses: ./.github/actions/build-project
