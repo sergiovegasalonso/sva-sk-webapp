@@ -10,5 +10,5 @@
 
 <Home />
 <div class="size-100">
-<SpainMap  />
+	<SpainMap />
 </div>
