@@ -13,8 +13,6 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup pnpm environment
         uses: ./.github/actions/setup-pnpm-environment
-      - name: Build project with Vite
-        uses: ./.github/actions/build-project
       - name: Check code formatting with Prettier
         run: pnpm exec prettier --check .
       - name: Check code with ESLint
