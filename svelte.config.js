@@ -10,7 +10,8 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			$root: 'src',
-			$shared: 'src/shared'
+			$shared: 'src/shared',
+			$features: 'src/features'
 		}
 	}
 };

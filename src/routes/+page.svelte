@@ -1,5 +1,6 @@
 <script lang="ts">
-	import Home from '$lib/components/pages/Home.svelte';
+	import Home from '$features/home/presentation/pages/Home.svelte';
+	import SpainMap from '$features/spain-elections/presentation/components/spain-map/SpainMap.svelte';
 </script>
 
 <svelte:head>
@@ -8,3 +9,6 @@
 </svelte:head>
 
 <Home />
+<div class="size-100">
+<SpainMap  />
+</div>
