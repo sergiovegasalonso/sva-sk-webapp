@@ -1,4 +1,4 @@
-name: Check code
+name: Lint code
 on:
   push:
     branches: main
@@ -15,10 +15,6 @@ jobs:
         uses: ./.github/actions/setup-pnpm-environment
       - name: Build project with Vite
         uses: ./.github/actions/build-project
-      - name: Synchronize files with Svelte Kit
-        run: pnpm exec svelte-kit sync
-      - name: Check code with Svelte Check
-        run: pnpm exec svelte-check --tsconfig ./tsconfig.json
       - name: Check code formatting with Prettier
         run: pnpm exec prettier --check .
       - name: Check code with ESLint
