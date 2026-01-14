@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { m } from '$lib/i18n/messages.js';
-	import { drawerState } from '$lib/states/drawer-state.svelte.js';
+	import { drawerState } from '$core/drawer/drawer-state.svelte.js';
 	import Button from '$shared/ui/atoms/buttons/Button.svelte';
 	import CloseIcon from '$shared/ui/atoms/icons/close/Close.svelte';
 	import MenuIcon from '$shared/ui/atoms/icons/menu/Menu.svelte';

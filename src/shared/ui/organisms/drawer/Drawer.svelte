@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { drawerState } from '$lib/states/drawer-state.svelte.js';
+	import { drawerState } from '$core/drawer/drawer-state.svelte.js';
 </script>
 
 <nav

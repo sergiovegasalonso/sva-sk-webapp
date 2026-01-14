@@ -13,13 +13,12 @@ CORREGIR ERROR CON LOS BORDES 0. arquitectura escalable GeorgeBYTES +ATOMIC DESI
 9. feature flags system
 10. environment configuration in front
 11. dsa lab
-12. nalanda lab
-13. tanstack query
-14. websockets experiment
-15. d3.js experiment
-16. zod???
-17. estandarizar forma de funcionar: página que obtiene datos y luego los pasa a los organims, atoms, molecules.
-18. Estudiar atomic desing
+12. nalanda lab with rxjs and tanstack query
+13. websockets experiment
+14. d3.js experiment
+15. zod???
+16. estandarizar forma de funcionar: página que obtiene datos y luego los pasa a los organims, atoms, molecules.
+17. Estudiar atomic desing
 
 ```js
 // routes/page.svelte.spec.ts

@@ -1,4 +1,4 @@
-import { drawerState } from '$lib/states/drawer-state.svelte.js';
+import { drawerState } from '$core/drawer/drawer-state.svelte.js';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { render } from 'vitest-browser-svelte';
 import Drawer from './Drawer.svelte';
