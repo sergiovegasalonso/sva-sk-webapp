@@ -1,6 +1,7 @@
 # pending
 
-0. config a good deploy in netlify
+555 0. config a good deploy in netlify
+
 1. arquitectura escalable GeorgeBYTES +ATOMIC DESING explain with a readme in every folder
 2. Estudiar atomic desing => resolver el tema de los templates
 3. config copilot instructions and mcps aunque no los use, remove lib
