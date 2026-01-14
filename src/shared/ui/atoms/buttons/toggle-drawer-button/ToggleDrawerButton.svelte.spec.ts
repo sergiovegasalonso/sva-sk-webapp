@@ -38,10 +38,10 @@ describe('/ToggleDrawerButton.svelte', () => {
 
 		expect(drawerState.open).toBe(false);
 
-		await button?.click();
+		button?.click();
 		expect(drawerState.open).toBe(true);
 
-		await button?.click();
+		button?.click();
 		expect(drawerState.open).toBe(false);
 	});
 

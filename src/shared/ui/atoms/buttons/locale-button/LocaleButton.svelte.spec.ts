@@ -6,9 +6,9 @@ import LocaleButton from './LocaleButton.svelte';
 
 // Mock the runtime module
 vi.mock('$lib/i18n/runtime', async (importOriginal) => {
-	const actual = await importOriginal();
+	const actual = await importOriginal<typeof runtime>();
 	return {
-		...actual,
+		...(actual as object),
 		getLocale: vi.fn(),
 		setLocale: vi.fn()
 	};
