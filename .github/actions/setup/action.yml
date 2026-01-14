@@ -1,5 +1,5 @@
-name: 'Setup PNPM Environment'
-description: 'Sets up a PNPM environment with Node.js, installs dependencies, and Playwright browsers.'
+name: 'Setup pnpm environment'
+description: 'Sets up a pnpm environment with Node.js, installs dependencies, and Playwright browsers.'
 runs:
   using: 'composite'
   steps:
