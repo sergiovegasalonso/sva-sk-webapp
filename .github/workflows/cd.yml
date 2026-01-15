@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Setup pnpm environment
         uses: ./.github/actions/setup-pnpm-environment
       - name: Synchronize types with Svelte Kit tool
@@ -25,7 +25,7 @@ jobs:
       - name: Build project with Vite
         run: pnpm exec vite build
       - name: Upload build artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: build-output
           path: build/
@@ -35,7 +35,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Setup pnpm environment
         uses: ./.github/actions/setup-pnpm-environment
       - name: Check code formatting with Prettier
@@ -47,7 +47,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Setup pnpm environment
         uses: ./.github/actions/setup-pnpm-environment
       - name: Synchronize types with Svelte Kit tool
@@ -62,13 +62,13 @@ jobs:
     needs: [build]
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Setup pnpm environment
         uses: ./.github/actions/setup-pnpm-environment
       - name: Synchronize types with Svelte Kit tool
         run: pnpm exec svelte-kit sync
       - name: Download build artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           name: build-output
           path: build/
@@ -82,13 +82,13 @@ jobs:
     needs: [build]
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Setup pnpm environment
         uses: ./.github/actions/setup-pnpm-environment
       - name: Synchronize types with Svelte Kit tool
         run: pnpm exec svelte-kit sync
       - name: Download build artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           name: build-output
           path: build/
@@ -96,7 +96,7 @@ jobs:
         run: pnpm exec playwright install --with-deps
       - name: Run Playwright tests
         run: pnpm exec playwright test
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         if: ${{ !cancelled() }}
         with:
           name: playwright-report
@@ -107,16 +107,16 @@ jobs:
     needs: [build, lint, check, test-unit, test-e2e]
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Download build artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           name: build-output
           path: build/
       - name: Deploy to Netlify
         uses: netlify/actions/cli@master
         with:
-          args: deploy --prod --dir=build
+          args: deploy --dir=build --functions=functions --prod
         env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
