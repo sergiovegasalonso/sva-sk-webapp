@@ -1,7 +1,6 @@
 # pending
 
-555 0. config a good deploy in netlify
-
+entender, paso a paso las Action, actualizar las versiones de los de las acciones predefinidos, optimizar la instalación de los navegadores de Play, Right Play, Right Play Right Play Right y hacer bien el despliegue a Netflix
 1. arquitectura escalable GeorgeBYTES +ATOMIC DESING explain with a readme in every folder
 2. Estudiar atomic desing => resolver el tema de los templates
 3. config copilot instructions and mcps aunque no los use, remove lib
