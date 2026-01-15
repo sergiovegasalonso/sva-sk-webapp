@@ -1,6 +1,6 @@
 # pending
 
-555 0. config a good deploy in netlify
+entender, paso a paso las Action, optimizar la instalación de los navegadores de Play, Right Play, Right Play Right Play Right y hacer bien el despliegue a producción de netlify,crean otro workflow que on push en ina rama de feature desplegar en entorno de dev
 
 1. arquitectura escalable GeorgeBYTES +ATOMIC DESING explain with a readme in every folder
 2. Estudiar atomic desing => resolver el tema de los templates
