@@ -49,6 +49,10 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup pnpm environment
         uses: ./.github/actions/setup-pnpm-environment
+      - name: Synchronize files with Svelte Kit
+        run: pnpm exec svelte-kit sync
+      - name: Build project with Vite
+        run: pnpm exec vite build
       - name: Install Playwright browsers
         run: pnpm exec playwright install --with-deps
       - name: Run Vitest tests
