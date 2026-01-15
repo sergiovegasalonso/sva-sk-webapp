@@ -113,10 +113,10 @@ jobs:
         with:
           name: build-output
           path: build/
+      - name: Setup pnpm environment
+        uses: ./.github/actions/setup-pnpm-environment
       - name: Deploy to Netlify
-        uses: netlify/actions/cli@master
-        with:
-          args: deploy --dir=build --functions=functions --prod
+        run: pnpm exec netlify deploy --dir=build --functions=functions --prod
         env:
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
