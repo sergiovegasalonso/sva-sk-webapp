@@ -1,8 +1,0 @@
-name: 'Build Project'
-description: 'Builds the project using Vite.'
-runs:
-  using: 'composite'
-  steps:
-    - name: Build project with Vite
-      run: pnpm exec vite build
-      shell: bash

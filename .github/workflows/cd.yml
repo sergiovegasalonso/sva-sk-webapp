@@ -1,0 +1,92 @@
+name: Continuous deployment
+on:
+  push:
+    branches: main
+jobs:
+  build:
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup pnpm environment
+        uses: ./.github/actions/setup-pnpm-environment
+      - name: Synchronize files with Svelte Kit
+        run: pnpm exec svelte-kit sync
+      - name: Build project with Vite
+        run: pnpm exec vite build
+  lint:
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup pnpm environment
+        uses: ./.github/actions/setup-pnpm-environment
+      - name: Check code formatting with Prettier
+        run: pnpm exec prettier --check .
+      - name: Check code with ESLint
+        run: pnpm exec eslint .
+  check:
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup pnpm environment
+        uses: ./.github/actions/setup-pnpm-environment
+      - name: Synchronize files with Svelte Kit
+        run: pnpm exec svelte-kit sync
+      - name: Build project with Vite
+        run: pnpm exec vite build
+      - name: Check code with Svelte Check
+        run: pnpm exec svelte-check --tsconfig ./tsconfig.json
+  test-unit:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup pnpm environment
+        uses: ./.github/actions/setup-pnpm-environment
+      - name: Synchronize files with Svelte Kit
+        run: pnpm exec svelte-kit sync
+      - name: Build project with Vite
+        run: pnpm exec vite build
+      - name: Install Playwright browsers
+        run: pnpm exec playwright install --with-deps
+      - name: Run Vitest tests
+        run: pnpm exec vitest --browser.headless=true
+  test-e2e:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup pnpm environment
+        uses: ./.github/actions/setup-pnpm-environment
+      - name: Build project with Vite
+        run: pnpm exec vite build
+      - name: Install Playwright browsers
+        run: pnpm exec playwright install --with-deps
+      - name: Run Playwright tests
+        run: pnpm exec playwright test
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [build, lint, check, test-unit, test-e2e]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Deploy to Netlify
+        uses: netlify/actions/cli@master
+        with:
+          args: deploy --prod --dir=build
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
