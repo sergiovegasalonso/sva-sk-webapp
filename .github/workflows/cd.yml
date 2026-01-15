@@ -19,7 +19,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: build-output
-          path: build/
+          path: |
+            build/
+            .svelte-kit/
   lint:
     timeout-minutes: 5
     runs-on: ubuntu-latest
@@ -45,7 +47,9 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build-output
-          path: build/
+          path: |
+            build/
+            .svelte-kit/
       - name: Check code with Svelte Check
         run: |
           pnpm exec svelte-kit sync
@@ -63,7 +67,9 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build-output
-          path: build/
+          path: |
+            build/
+            .svelte-kit/
       - name: Install Playwright browsers
         run: pnpm exec playwright install --with-deps
       - name: Run Vitest tests
@@ -81,7 +87,9 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build-output
-          path: build/
+          path: |
+            build/
+            .svelte-kit/
       - name: Install Playwright browsers
         run: pnpm exec playwright install --with-deps
       - name: Run Playwright tests
@@ -102,7 +110,9 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build-output
-          path: build/
+          path: |
+            build/
+            .svelte-kit/
       - name: Deploy to Netlify
         uses: netlify/actions/cli@master
         with:
