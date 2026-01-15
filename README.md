@@ -27,9 +27,3 @@ describe('/+page.svelte', () => {
 });
 ``;
 ```
-
-on:
-push:
-branches: main
-pull_request:
-branches: main
