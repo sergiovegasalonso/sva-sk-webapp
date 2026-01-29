@@ -35,3 +35,6 @@ test_results
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+
+# inlang
+src/i18n/.inlang/cache/
