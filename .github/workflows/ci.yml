@@ -40,7 +40,7 @@ jobs:
           path: build/
           retention-days: 7
 
-  lint:
+  quality:
     timeout-minutes: 5
     runs-on: ubuntu-latest
 
@@ -57,22 +57,8 @@ jobs:
       - name: Check code with ESLint
         run: pnpm exec eslint .
 
-  check:
-    timeout-minutes: 5
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v6
-
-      - name: Setup pnpm environment
-        uses: ./.github/actions/setup-pnpm-environment
-
       - name: Synchronize types with Svelte Kit tool
         run: pnpm exec svelte-kit sync
-
-      - name: Build project with Vite
-        run: pnpm exec vite build
 
       - name: Check code with Svelte Check
         run: pnpm exec svelte-check --tsconfig ./tsconfig.json

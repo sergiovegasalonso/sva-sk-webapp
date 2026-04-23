@@ -1,5 +1,10 @@
 name: 'Setup pnpm environment'
 description: 'Sets up a pnpm environment with Node.js and dependencies installation.'
+inputs:
+  install-dependencies:
+    description: 'Install dependencies with pnpm.'
+    required: false
+    default: 'true'
 runs:
   using: 'composite'
   steps:
@@ -14,5 +19,6 @@ runs:
         node-version: lts/*
         cache: 'pnpm'
     - name: Install dependencies
+      if: ${{ inputs.install-dependencies == 'true' }}
       run: pnpm install --frozen-lockfile --prefer-offline
       shell: bash
