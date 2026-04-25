@@ -1,5 +1,5 @@
+import { Locale } from '$core/locale-service/types/locale.enum';
 import * as runtime from '$lib/i18n/runtime';
-import { Locale } from '$shared/types/enums/locale.enum';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { render } from 'vitest-browser-svelte';
 import LocaleButton from './LocaleButton.svelte';

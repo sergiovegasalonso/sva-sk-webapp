@@ -1,7 +1,8 @@
 <script lang="ts">
+	import { getOppositeLocaleCompleteText, toggleLocale } from '$core/locale-service/locale-actions';
+	import { Locale } from '$core/locale-service/types/locale.enum';
 	import { m } from '$lib/i18n/messages.js';
-	import { getLocale, setLocale } from '$lib/i18n/runtime';
-	import { Locale } from '$shared/types/enums/locale.enum';
+	import { getLocale } from '$lib/i18n/runtime';
 	import Button from '$shared/ui/atoms/buttons/Button.svelte';
 	import LanguageEnglishIcon from '$shared/ui/atoms/icons/language-english/LanguageEnglish.svelte';
 	import LanguageSpanishIcon from '$shared/ui/atoms/icons/language-spanish/LanguageSpanish.svelte';
@@ -9,14 +10,6 @@
 	import Space from '$shared/ui/atoms/space/Space.svelte';
 
 	let { class: className = '' } = $props();
-
-	function getOppositeLocaleCompleteText(): string {
-		return getLocale() === Locale.ES ? 'English' : 'Español';
-	}
-
-	function toggleLocale(): void {
-		setLocale(getLocale() === Locale.ES ? Locale.EN : Locale.ES);
-	}
 </script>
 
 <Button ariaLabel={m.toggle_locale()} class={className} onclick={toggleLocale}>
