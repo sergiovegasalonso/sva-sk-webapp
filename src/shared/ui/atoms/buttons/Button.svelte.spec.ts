@@ -2,7 +2,22 @@ import { describe, expect, it } from 'vitest';
 import { render } from 'vitest-browser-svelte';
 import Button from './Button.svelte';
 
-const DEFAULT_CLASSES = ['btn'];
+const DEFAULT_CLASSES = [
+	'flex',
+	'cursor-pointer',
+	'items-center',
+	'border-2',
+	'border-d',
+	'bg-l',
+	'px-4',
+	'py-2',
+	'hover:bg-lh',
+	'focus:bg-lh',
+	'dark:border-l',
+	'dark:bg-d',
+	'dark:hover:bg-dh',
+	'dark:focus:bg-dh'
+];
 
 const renderButton = (props = {}) => {
 	return render(Button, {

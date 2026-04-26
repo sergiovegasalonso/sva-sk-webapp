@@ -5,8 +5,7 @@ import ThemeButton from './ThemeButton.svelte';
 
 describe('/ThemeButton.svelte', () => {
 	beforeEach(() => {
-		const html = document.documentElement;
-		html.dataset.theme = Theme.Light;
+		// Reset DOM state and localStorage
 		document.documentElement.classList.remove(Theme.Dark);
 		localStorage.clear();
 	});
@@ -17,20 +16,19 @@ describe('/ThemeButton.svelte', () => {
 		expect(button).not.toBeNull();
 	});
 
-	it('should change data attribute called theme on html element when clicked', async () => {
+	it('should toggle theme class on html element when clicked', async () => {
 		const { container } = render(ThemeButton);
 		const button = container.querySelector('button');
-		const html = document.documentElement;
 
-		expect(html.dataset.theme).toBe(Theme.Light);
-
-		await button?.click();
-
-		expect(html.dataset.theme).toBe(Theme.Dark);
+		expect(document.documentElement.classList.contains(Theme.Dark)).toBe(false);
 
 		await button?.click();
 
-		expect(html.dataset.theme).toBe(Theme.Light);
+		expect(document.documentElement.classList.contains(Theme.Dark)).toBe(true);
+
+		await button?.click();
+
+		expect(document.documentElement.classList.contains(Theme.Dark)).toBe(false);
 	});
 
 	it('should update localStorage when clicked', async () => {
