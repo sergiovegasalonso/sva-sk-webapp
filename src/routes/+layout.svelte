@@ -5,11 +5,9 @@
 	import Page from '$shared/ui/atoms/page/Page.svelte';
 	import Drawer from '$shared/ui/organisms/drawer/Drawer.svelte';
 	import Header from '$shared/ui/organisms/header/Header.svelte';
-	import { QueryClient, QueryClientProvider } from '@tanstack/svelte-query';
+	import { QueryClientProvider } from '@tanstack/svelte-query';
 
-	let { children } = $props();
-
-	const queryClient = new QueryClient();
+	const { data, children } = $props();
 </script>
 
 <svelte:head>
@@ -20,7 +18,7 @@
 
 <Header />
 <Drawer />
-<QueryClientProvider client={queryClient}>
+<QueryClientProvider client={data.queryClient}>
 	<Page>
 		{@render children()}
 	</Page>
