@@ -5,8 +5,11 @@
 	import Page from '$shared/ui/atoms/page/Page.svelte';
 	import Drawer from '$shared/ui/organisms/drawer/Drawer.svelte';
 	import Header from '$shared/ui/organisms/header/Header.svelte';
+	import { QueryClient, QueryClientProvider } from '@tanstack/svelte-query';
 
 	let { children } = $props();
+
+	const queryClient = new QueryClient();
 </script>
 
 <svelte:head>
@@ -17,8 +20,10 @@
 
 <Header />
 <Drawer />
-<Page>
-	{@render children()}
-</Page>
+<QueryClientProvider client={queryClient}>
+	<Page>
+		{@render children()}
+	</Page>
+</QueryClientProvider>
 <ToggleDrawerButton class="fixed right-4 bottom-4 z-90 lg:right-8 lg:bottom-8" />
 <hr />

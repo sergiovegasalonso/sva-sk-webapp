@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@tanstack/svelte-query':
+        specifier: ^6.1.22
+        version: 6.1.22(svelte@5.55.4(@typescript-eslint/types@8.59.0))
     devDependencies:
       '@eslint/compat':
         specifier: ^1.4.1
@@ -1925,6 +1929,14 @@ packages:
     resolution: {integrity: sha512-pCvohwOCspk3ZFn6eJzrrX3g4n2JY73H6MmYC87XfGPyTty4YsCjYTMArRZm/zOI8dIt3+EcrLHAFPe5A4bgtw==}
     peerDependencies:
       vite: ^5.2.0 || ^6 || ^7 || ^8
+
+  '@tanstack/query-core@5.100.3':
+    resolution: {integrity: sha512-oMO1imV4qStH+GqddafkI7Q7r2ktPL7/0Mu74W1XEhfHHd3oTIrwP3OOIsbtpnnbe8y/IU+8Lm7Bi2LlMhVdNA==}
+
+  '@tanstack/svelte-query@6.1.22':
+    resolution: {integrity: sha512-Zm/ToutNQvCIipXrPnr8KhLhz+OXb4t5HR4g8ZfCmU2ux2jDBFCbFFxAUCiaxIO3gZxx2a5FKEy0/WxjE6rMtA==}
+    peerDependencies:
+      svelte: ^5.25.0
 
   '@testing-library/dom@10.4.1':
     resolution: {integrity: sha512-o4PXJQidqJl82ckFaXUeoAW+XysPLauYI43Abki5hABd853iMhitooc6znOnczgbTYmEP6U6/y1ZyKAIsvMKGg==}
@@ -7956,6 +7968,13 @@ snapshots:
       '@tailwindcss/oxide': 4.2.4
       tailwindcss: 4.2.4
       vite: 7.3.2(@types/node@22.19.17)(jiti@2.6.1)(lightningcss@1.32.0)(yaml@2.8.3)
+
+  '@tanstack/query-core@5.100.3': {}
+
+  '@tanstack/svelte-query@6.1.22(svelte@5.55.4(@typescript-eslint/types@8.59.0))':
+    dependencies:
+      '@tanstack/query-core': 5.100.3
+      svelte: 5.55.4(@typescript-eslint/types@8.59.0)
 
   '@testing-library/dom@10.4.1':
     dependencies:
