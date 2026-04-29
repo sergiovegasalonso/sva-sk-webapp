@@ -1,4 +1,4 @@
-import { Theme } from '$core/theme-service/types/theme.enum';
+import { Theme } from '$core/theme/types/theme.enum';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { render } from 'vitest-browser-svelte';
 import ThemeButton from './ThemeButton.svelte';

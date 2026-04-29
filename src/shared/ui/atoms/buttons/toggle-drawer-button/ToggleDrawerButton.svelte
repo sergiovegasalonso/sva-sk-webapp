@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { drawerState } from '$core/drawer-service/drawer-state.svelte.js';
+	import { drawerState } from '$core/drawer/services/drawer-state.svelte.js';
 	import { m } from '$lib/i18n/messages.js';
 	import Button from '$shared/ui/atoms/buttons/Button.svelte';
 	import CloseIcon from '$shared/ui/atoms/icons/close/Close.svelte';

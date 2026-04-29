@@ -1,5 +1,5 @@
-import { themeState } from '$core/theme-service/theme-state.svelte';
-import { Theme } from '$core/theme-service/types/theme.enum';
+import { Theme } from '../types/theme.enum';
+import { themeState } from './theme-state.svelte';
 
 function getCurrentThemeFromDom(): string {
 	if (typeof document === 'undefined') {

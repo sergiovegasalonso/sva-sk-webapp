@@ -1,4 +1,4 @@
-import { drawerState } from '$core/drawer-service/drawer-state.svelte.js';
+import { drawerState } from '$core/drawer/services/drawer-state.svelte.js';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { render } from 'vitest-browser-svelte';
 import ToggleDrawerButton from './ToggleDrawerButton.svelte';

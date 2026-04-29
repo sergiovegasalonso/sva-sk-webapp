@@ -1,5 +1,5 @@
-import { Locale } from '$core/locale-service/types/locale.enum';
 import { getLocale, setLocale } from '$lib/i18n/runtime';
+import { Locale } from '../types/locale.enum';
 
 export function getOppositeLocaleCompleteText(): string {
 	return getLocale() === Locale.ES ? 'English' : 'Español';

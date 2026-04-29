@@ -1,6 +1,9 @@
 <script lang="ts">
-	import { getOppositeLocaleCompleteText, toggleLocale } from '$core/locale-service/locale-actions';
-	import { Locale } from '$core/locale-service/types/locale.enum';
+	import {
+		getOppositeLocaleCompleteText,
+		toggleLocale
+	} from '$core/locale/services/locale-actions';
+	import { Locale } from '$core/locale/types/locale.enum';
 	import { m } from '$lib/i18n/messages.js';
 	import { getLocale } from '$lib/i18n/runtime';
 	import Button from '$shared/ui/atoms/buttons/Button.svelte';

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import { drawerState } from '$core/drawer-service/drawer-state.svelte.js';
+	import { drawerState } from '$core/drawer/services/drawer-state.svelte.js';
 </script>
 
 <nav

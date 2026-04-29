@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import { api } from '$core/refactor/api';
+	import { api } from '$core/refactor/services/api';
 	import { createQuery, useQueryClient } from '@tanstack/svelte-query';
 
 	const client = useQueryClient();

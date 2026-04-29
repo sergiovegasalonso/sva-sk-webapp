@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { toggleTheme } from '$core/theme-service/theme-actions';
+	import { toggleTheme } from '$core/theme/services/theme-actions';
 	import { m } from '$lib/i18n/messages.js';
 	import Button from '$shared/ui/atoms/buttons/Button.svelte';
 	import MoonIcon from '$shared/ui/atoms/icons/moon/Moon.svelte';

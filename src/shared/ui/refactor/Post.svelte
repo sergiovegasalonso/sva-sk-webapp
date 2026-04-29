@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import { api } from '$core/refactor/api';
-	import type { Post } from '$core/refactor/types';
+	import { api } from '$core/refactor/services/api';
+	import type { Post } from '$core/refactor/types/types';
 	import { createQuery } from '@tanstack/svelte-query';
 
 	const { postId }: { postId: number } = $props();

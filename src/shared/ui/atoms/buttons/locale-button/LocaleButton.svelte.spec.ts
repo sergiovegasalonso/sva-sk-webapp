@@ -1,4 +1,4 @@
-import { Locale } from '$core/locale-service/types/locale.enum';
+import { Locale } from '$core/locale/types/locale.enum';
 import * as runtime from '$lib/i18n/runtime';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { render } from 'vitest-browser-svelte';
