@@ -1,14 +1,14 @@
 import { describe, expect, it } from 'vitest';
 import { render } from 'vitest-browser-svelte';
-import Home from './Home.svelte';
+import HomeMainView from './Main.svelte';
 
 const renderHome = (props = {}) => {
-	return render(Home, {
+	return render(HomeMainView, {
 		...props
 	});
 };
 
-describe('/Home.svelte', () => {
+describe('Home feature: HomeMainView -> $features/home/views/Main.svelte', () => {
 	it('should render only one h1 element', async () => {
 		const { container } = renderHome();
 		const h1s = container.querySelectorAll('h1');

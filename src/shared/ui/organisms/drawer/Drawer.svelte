@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import { drawerState } from '$core/drawer-service/drawer-state.svelte.js';
 </script>
 
@@ -8,5 +9,9 @@
 		   {!drawerState.open
 		? 'translate-x-0 translate-y-full lg:translate-x-full lg:translate-y-0'
 		: ''}">
-	<ul></ul>
+	<ul>
+		<li>
+			<a href={resolve('/blog')}>Blog</a>
+		</li>
+	</ul>
 </nav>

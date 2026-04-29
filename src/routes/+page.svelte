@@ -1,7 +1,6 @@
 <script lang="ts">
-	import Home from '$features/home/presentation/pages/Home.svelte';
-	import SpainMap from '$features/spain-elections/presentation/components/spain-map/SpainMap.svelte';
-	import Posts from '$root/shared/ui/refactor/Posts.svelte';
+	import HomeMainView from '$features/home/views/Main.svelte';
+	import Posts from '$shared/ui/refactor/Posts.svelte';
 </script>
 
 <svelte:head>
@@ -9,8 +8,7 @@
 	<meta name="description" content="Homepage" />
 </svelte:head>
 
-<Home />
+<HomeMainView />
 <div class="w-full">
-	<SpainMap />
 	<Posts />
 </div>
