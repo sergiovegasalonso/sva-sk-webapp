@@ -2,6 +2,13 @@
 
 0. Terminar la feature de blog bien organizada, con tanstack query elegante, tests y enrutado en una page y con traducciones
 
+https://dev.to/robearlam/an-introduction-to-harness-engineering-3j9l
+
+- skills
+- mcps
+- incrementar contexto
+- instructions
+
 1. repasar cada punto de los workflows e intentar optimizar la instalación de los browsers de playwright
 2. arquitectura escalable GeorgeBYTES
    hacer bien los tests, limpiar bien los rectaodscle
