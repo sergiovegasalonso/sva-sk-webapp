@@ -1,4 +1,4 @@
-import { api } from '$core/refactor/services/api';
+import { api } from '$features/blog/services/api';
 import type { PageLoad } from './$types';
 
 export const load: PageLoad = async ({ parent, fetch }) => {

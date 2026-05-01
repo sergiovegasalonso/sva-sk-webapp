@@ -1,13 +1,14 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import { api } from '$core/refactor/services/api';
 	import { createQuery, useQueryClient } from '@tanstack/svelte-query';
+	import { api } from '../services/api';
+	import type { Post } from '../types/Post';
 
 	const client = useQueryClient();
 
 	const limit = 10;
 
-	const posts = createQuery<{ id: number; title: string; body: string }[], Error>(() => ({
+	const posts = createQuery<Post[], Error>(() => ({
 		queryKey: ['posts', limit],
 		queryFn: () => api().getPosts(limit)
 	}));

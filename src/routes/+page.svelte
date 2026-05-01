@@ -1,6 +1,6 @@
 <script lang="ts">
+	import Posts from '$features/blog/components/Posts.svelte';
 	import HomeMainView from '$features/home/views/Main.svelte';
-	import Posts from '$shared/ui/refactor/Posts.svelte';
 </script>
 
 <svelte:head>

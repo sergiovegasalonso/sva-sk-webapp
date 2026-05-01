@@ -1,4 +1,4 @@
-import type { Post } from '../types/types';
+import type { Post } from '../types/Post';
 
 export const api = (customFetch = fetch) => ({
 	getPosts: async (limit: number) => {
